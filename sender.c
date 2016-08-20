@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /* If you are building x64 on Windows with WinPcap change add
  * || defined(_WIN64) to #if defined(WIN32) on line 40 */
 #include <pcap/pcap.h>
