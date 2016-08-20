@@ -55,7 +55,9 @@ int main(int argc, char **argv)
 
     for (d = alldevs; d; d = d->next, ++num_ifaces)
     {
-        if (index == -1 && (strcmp(d->description, argv[1]) == 0 || strcmp(d->name, argv[1]) == 0))
+        if (index == -1 && 
+            ((d->description && (strcmp(d->description, argv[1]) == 0))
+                || (d->name && (strcmp(d->name, argv[1]) == 0))))
             index = num_ifaces;
     }
 
