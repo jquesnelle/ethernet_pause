@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#ifdef _WIN32
+    #include <Windows.h>
+#else
+    #include <unistd.h>
+#endif
+
 /* If you are building x64 on Windows with WinPcap change add
  * || defined(_WIN64) to #if defined(WIN32) on line 40 */
 #include <pcap/pcap.h>
-
-
 
 int main(int argc, char **argv)
 {
