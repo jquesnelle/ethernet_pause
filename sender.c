@@ -17,12 +17,12 @@ int main(int argc, char **argv)
     char errbuf[PCAP_ERRBUF_SIZE + 1];
     unsigned char PAUSE_FRAME[60] =
     {
-        0x01, 0x80, 0xC2, 0x00, 0x00, 0x01, /* Destination MAC: Spanning tree for bridges	*/
-        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, /* Source MAC:      Null						*/
-        0x88, 0x08,							/* EtherType:       MAC control					*/
-        0x00, 0x01,							/* OpCode:			Pause						*/
-        0xFF, 0xFF,							/* pause_time:		65535						*/
-                                            /* 42 bytes of padding							*/
+        0x01, 0x80, 0xC2, 0x00, 0x00, 0x01, /* Destination MAC: Spanning tree for bridges   */
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, /* Source MAC:      Null                        */
+        0x88, 0x08,                         /* EtherType:       MAC control                 */
+        0x00, 0x01,                         /* OpCode:			Pause                       */
+        0xFF, 0xFF,                         /* pause_time:		65535                       */
+                                            /* 42 bytes of padding                          */
     };
 
     if (pcap_findalldevs(&alldevs, errbuf) == -1)
